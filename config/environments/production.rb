@@ -3,6 +3,8 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.web_socket_server_url = "wss://chat-app-ruby.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://chat-app-ruby.herokuapp.com', 'http://chat-app-ruby.herokuapp.com']
   # Code is not reloaded between requests.
   config.cache_classes = true
 
